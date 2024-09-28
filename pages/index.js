@@ -19,8 +19,8 @@ export default function Home() {
         width: 400,
         margin: "auto",
         marginTop: 100,
-        backgroundColor: "#f0f2f5", // Light background color
-        borderRadius: "12px", // Rounded corners
+        backgroundColor: "#f0f2f5",
+        borderRadius: "12px",
         boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)", // Subtle shadow
       }}
     >
