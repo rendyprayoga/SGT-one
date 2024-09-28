@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Form, Input, Button, Card } from "antd";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [isLoggedIn, setIsloggedIn] = useState(false);
+  const router = useRouter();
 
   const onFinish = (values) => {
     console.log("Succes:", values);
     setIsloggedIn(true);
+    router.push("/main");
   };
 
   if (isLoggedIn) {
@@ -21,7 +24,7 @@ export default function Home() {
         marginTop: 100,
         backgroundColor: "#f0f2f5",
         borderRadius: "12px",
-        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)", // Subtle shadow
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
       }}
     >
       <div style={{ maxWidth: 300, margin: "auto", marginTop: 50 }}>
